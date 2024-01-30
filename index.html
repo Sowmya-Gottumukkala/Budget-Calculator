@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Budget Calculator</title>
+</head>
+<body>
+    <header class="bg-dark">
+        <div class="info" > 
+            <a href="https://www.linkedin.com/in/sowmya-gottumukkala-639730227/"><img src="https://play-lh.googleusercontent.com/kMofEFLjobZy_bCuaiDogzBcUT-dz3BBbOrIEjJ-hqOabjK8ieuevGe6wlTD15QzOqw" height="40px" width="40px"></a>
+			<a href="https://github.com/Sowmya-Gottumukkala"><img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" height="40px" width="40px"></a>
+        </div>
+        <h2>Budget Calculator</h2>
+        <p>Sowmya Gottumukkala</p>
+    </header>
+    <div>
+        <section class="s1 ">
+            <div> 
+                <div class="budget__title">
+                    Available Budget in <span id="month"></span>
+                </div>
+                <div class="budget__value" id="f_scr">-0.00 Rs.</div>
+                <hr>
+                <div class="budget__income ">
+                    <div >Income</div>
+                    <div >
+                        <div  id="upd_inc">+ 0.00</div> 
+                    </div>
+                </div>
+                <div class="budget__expenses ">
+                    <div >Expenses</div>
+                    <div >
+                        <div  id="upd_exp">- 0.00</div>
+                        <div  id="exp_fperc">___</div>
+                    </div>
+                </div>
+				
+				<!-- Add this section after the Expenses section -->
+
+
+            </div>
+        </section>
+        <section class="split">
+            <section class="s2">
+                <form class="container split">
+                    <select id="type">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                    </select>
+                    <input type="text" id="desc" placeholder="Description">
+                    <input type="number" id="val" placeholder="Value">
+                    <button type="submit" onclick="run()">Add</button>
+                </form>
+                <div class="container">
+                    <div class="list split">
+                        <div class="income container">
+                            <h2 class="icome__title">Income</h2>
+                            <hr>
+                            <div class="income__list" id="ilist">
+                                <!-- <div class="item" >
+                                    <div>Salary</div>
+                                    <div class="right ">
+                                        <div>+ 2,100.00</div>
+                                        <div>
+                                            <div class="item__delete--btn"><i class="fa fa-close" ></i></div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="expenses container">
+                            <h2 class="expenses__title">Expenses</h2>
+                            <hr>
+                            <div class="expenses__list" id="elist">
+                                <!-- <div class="item " >
+                                    <div >Apartment rent</div>
+                                    <div class="right ">
+                                        <div >- 900</div>
+                                        <div class="item__percentage">21%</div>
+                                        <div >
+                                            <div class="item__delete--btn"><i class="fa fa-close"></i></div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+						
+						
+                    </div> 
+                </div>     
+            </section>
+            <section class="s3 container">
+                <div ><canvas id="chart-area"></canvas></div>   
+            </section>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
