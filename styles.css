@@ -1,0 +1,187 @@
+:root{
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-heading: 'Playfair Display', serif;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    font-size: 1.3125rem;
+    line-height: 1.6;
+    background-color: rgb(153, 101, 86);
+    overflow-x: hidden;
+}
+
+h2{
+    font-family: var(--ff-heading);
+    font-weight: 600;
+    line-height: 1;
+    font-size: 1.3125rem;
+}
+
+.bg-dark{
+    color: white;
+    background-color: #222c2a;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+   align-items: center;
+   padding-inline: 1vw;
+}
+
+.info{
+    margin-top: 10px;
+}
+
+header p{
+    font-size: 1rem;
+}
+
+form #desc{
+    width: 40vw;
+}
+
+form #type{
+    width: 12.5vw 
+}
+
+form #val{
+    width: 15vw;
+}
+
+form{
+    padding-inline: 1vh;
+}
+
+form input, form button, form select{
+    padding: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: blanchedalmond; 
+}
+
+.budget__income{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+.budget__expenses{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-weight: 550;
+}
+
+.s1{
+    /*background-color: rgb(133, 56, 32);;*/
+	/* #2E8B57 */
+    color: blanchedalmond;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.s2{
+    text-align: center;
+    padding-top: 2vh;
+}
+
+.list{
+    padding-inline: 1vh;
+    padding-top: 10px;
+}
+
+.icome__title{
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.expenses__title{
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+hr{
+    margin-bottom: 10px;
+    width: 99%;
+}
+
+.item{
+    display:flex;
+    justify-content: space-between;
+    margin-top: 7px;
+    background-color: blanchedalmond;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.right{
+    display: flex;
+}
+.item__delete--btn {
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.item__percentage{
+    margin-left: 10px;
+    background-color: rgba(227, 17, 17, 0.70);
+    padding-inline: 3px;
+    border-radius: 20%;
+}
+
+.container{
+    margin-inline: auto;
+    width: min(90%,70.5rem);
+}
+
+.expenses{
+    margin-left: 10px;
+}
+
+@media (min-width: 40em){
+    .split{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    form #desc{
+        width: 30vw;
+        margin-left: 5px;
+    }
+
+    form #val {
+        width:10vw;
+        margin-left: 5px;
+    }
+
+    form #type{
+        width: 6vw;
+        margin-left: 5px;
+    }
+
+    form button{
+        margin-left: 5px;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+}
